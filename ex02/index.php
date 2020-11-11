@@ -1,22 +1,24 @@
 <?php
 
 include_once('SimpleCookie.php');
-include_once('CookieMacadamia.php');
-include_once('CookieWhiteChocolate.php');
-include_once('CookieBlackChocolate.php');
+include_once('DecoratorCookie.php');
 
 $simpleCookie = new SimpleCookie();
-echo $simpleCookie->getType(); // 170
-echo $simpleCookie->getCalories(); // Cookie
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
 
 $simpleCookie = new CookieMacadamia($simpleCookie);
-echo $simpleCookie->getType(); // 200
-echo $simpleCookie->getCalories(); // Cookie with macadamia
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
 
 $simpleCookie = new CookieWhiteChocolate($simpleCookie);
-echo $simpleCookie->getType(); // 250
-echo $simpleCookie->getCalories(); // Cookie with white chocolate
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
 
-$simpleCookie = new CookieBlackChocolate($simpleCookie);
-echo $simpleCookie->getType(); // 150
-echo $simpleCookie->getCalories(); //Cookie with black chocolate
+/*
+Resultat:
+
+Simple Cookie 170
+Simple Cookie, macadamia 180
+Simple Cookie, macadamia, white chocolate 200
+*/

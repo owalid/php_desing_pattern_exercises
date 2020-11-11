@@ -9,6 +9,6 @@ class ComputerDell implements Computer {
   }
 
   public function printBrand() {
-    echo $this->brand;
+    echo $this->brand . PHP_EOL;
   }
 }

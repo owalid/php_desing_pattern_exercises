@@ -9,7 +9,7 @@ class AsianFood implements Food
 {
     public function getDescription()
     {
-        echo 'I am a asian food' . PHP_EOL;
+        echo 'I am an Asian food' . PHP_EOL;
     }
 }
 
@@ -17,6 +17,6 @@ class FrenchFood implements Food
 {
     public function getDescription()
     {
-        echo 'I am a french food' . PHP_EOL;
+        echo 'I am a French food' . PHP_EOL;
     }
 }

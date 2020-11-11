@@ -19,7 +19,7 @@ class Portrait implements Picture
 
   public function getPicture()
   {
-    return "Portrait picture with " . $this->filter->getFilter();
+    return "Portrait picture with " . $this->filter->getFilter() . PHP_EOL;
   }
 }
 
@@ -34,6 +34,6 @@ class Landscape implements Picture
 
   public function getPicture()
   {
-    return "Landscape picture with " . $this->filter->getFilter();
+    return "Landscape picture with " . $this->filter->getFilter() . PHP_EOL;
   }
 }

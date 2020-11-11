@@ -2,7 +2,7 @@
 
 Crée un singleton Single qui contiendras
 
-une variable:
+Une variable:
 
 ```php
 $instance // => qui sera une instance de votre singleton
@@ -14,4 +14,4 @@ Une methode:
 getInstance() // => retourne l'instance courrante  ou en créer une nouvelle et retourne juste apres l'avoir crée.
 ```
 
-Index.php doit retourner true
+index.php doit retourner `OK`
