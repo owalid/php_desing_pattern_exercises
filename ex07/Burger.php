@@ -36,6 +36,6 @@ class Burger
 
     public function clearTheTable()
     {
-        echo "It's clean now !" . PHP_EOL;
+        echo "The table was dirty, It's clean now !" . PHP_EOL;
     }
 }
