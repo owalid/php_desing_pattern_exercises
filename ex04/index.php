@@ -1,11 +1,9 @@
 <?php
-include_once('Message.php');
-include_once('basic/BasicMessageManager.php');
-include_once('facebook/FbMessageManagerAdapter.php');
+include_once('QueryBuilder.php');
 
-$basicMessageManager = new BasicMessageManager();
-Message::printMessage($basicMessageManager, 'print "hello world" by basic');
-
-$fbMsgManager = new FbMessageManager();
-$adapter = new FbMessageManagerAdapter($fbMsgManager);
-Message::printMessage($adapter, 'print "hello world" by adapter');
+$query = new QueryBuilder();
+echo $query
+      ->select('id', 'firstname', 'lastname')
+      ->from('usr', 'user')
+      ->where('u.id = 1', 'u.lastname = Dupond');
+// SELECT id, firstname, lastname FROM usr AS user WHERE u.id = 1 AND u.lastname = Dupond

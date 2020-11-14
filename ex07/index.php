@@ -1,22 +1,18 @@
 <?php
-include_once('BurgerFacade.php');
-include_once('Burger.php');
+include_once('Emitter.php');
 
-$burger = new BurgerFacade(new Burger());
+$emitter = Emitter::getInstance();
 
-$burger->getBurger();
-// retourne:
-/*
-Bread ok !
-The steak is cooking !
-Onion, tomatoes, salads
-Ready to be served !
-*/
+$emitter->on('new-user', function ($login) {
+  echo 'New user: ' . $login . PHP_EOL;
+});
 
-$burger->eatBurger();
-// retourne:
-/*
-It's beautiful burger
-yummmm
-It's clean now !
-*/
+$emitter->on('new-comment', function ($login, $message) {
+  echo 'User: ' . $login . ' commented: ' . $message . PHP_EOL;
+});
+
+
+$emitter->emit('new-user', 'admin');
+$emitter->emit('new-user', 'user');
+$emitter->emit('new-comment', 'user', 'Nice !');
+$emitter->emit('new-comment', 'admin', 'Thanks !');

@@ -1,24 +1,22 @@
 <?php
+include_once('BurgerFacade.php');
+include_once('Burger.php');
 
-include_once('SimpleCookie.php');
-include_once('DecoratorCookie.php');
+$burger = new BurgerFacade(new Burger());
 
-$simpleCookie = new SimpleCookie();
-echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
-echo PHP_EOL;
-
-$simpleCookie = new CookieMacadamia($simpleCookie);
-echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
-echo PHP_EOL;
-
-$simpleCookie = new CookieWhiteChocolate($simpleCookie);
-echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
-echo PHP_EOL;
-
+$burger->getBurger();
+// retourne:
 /*
-Resultat:
+Bread ok !
+The steak is cooking !
+Onion, tomatoes, salads
+Ready to be served !
+*/
 
-Simple Cookie 170
-Simple Cookie, macadamia 180
-Simple Cookie, macadamia, white chocolate 200
+$burger->eatBurger();
+// retourne:
+/*
+It's beautiful burger
+yummmm
+It's clean now !
 */

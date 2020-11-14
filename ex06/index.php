@@ -1,18 +1,11 @@
 <?php
-include_once('Emitter.php');
+include_once('Message.php');
+include_once('basic/BasicMessageManager.php');
+include_once('facebook/FbMessageManagerAdapter.php');
 
-$emitter = Emitter::getInstance();
+$basicMessageManager = new BasicMessageManager();
+Message::printMessage($basicMessageManager, 'print "hello world" by basic');
 
-$emitter->on('new-user', function ($login) {
-  echo 'New user: ' . $login . PHP_EOL;
-});
-
-$emitter->on('new-comment', function ($login, $message) {
-  echo 'User: ' . $login . ' commented: ' . $message . PHP_EOL;
-});
-
-
-$emitter->emit('new-user', 'admin');
-$emitter->emit('new-user', 'user');
-$emitter->emit('new-comment', 'user', 'Nice !');
-$emitter->emit('new-comment', 'admin', 'Thanks !');
+$fbMsgManager = new FbMessageManager();
+$adapter = new FbMessageManagerAdapter($fbMsgManager);
+Message::printMessage($adapter, 'print "hello world" by adapter');

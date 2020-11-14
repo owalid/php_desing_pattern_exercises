@@ -1,33 +1,31 @@
-# ex02 - Decorator
+# Facade
 
-La classe `SimpleCookie` implémente l'interface `Cookie`.
+Une façade permet de ne pas rendre visible la complexité derrière une classe.
 
-Faites en sortes d'utiliser un décorateurs avec les classes `CookieMacadamia`, `CookieWhiteChocolate`. Dans le fichier `DecoratorCookie.php`.
-
-Les décorateurs auront dans leurs classes:
+Implémenter une façade `BurgerFacade` qui aura:
 
 Un attribut:
-
 ```php
-protected $cookie;
+protected $burger
+// Une instance de la classe Burger qui sera initialisée au constructeur
 ```
 
-Des methodes:
-
+Deux methodes:
 ```php
-public function __construct(Cookie $coffee){}
+public function getBurger()
+// Qui appellera les méthodes qui correspondent à la confection d'un burger (cf Burger.php)
 
-public function getCalories(): Cookie {} 
-// Qui retournera la calorie courrante + l'ajout d'un nombre
-
-public function getType(): string {}
-// Qui retournera le type courrant + l'ajout d'une string
+public function eatBurger()
+// Qui appellera les méthodes qui correspondent à l'alimentation d'un burger (cf. Burger.php)
 ```
 
-La sortie que vous devez obtenir est la suivante:
-
+Vous devez obtenir la sortie suivante:
 ```
-Simple Cookie 170
-Simple Cookie, macadamia 180
-Simple Cookie, macadamia, white chocolate 200
+Bread ok !
+The steak is cooking !
+Onion, tomatoes, salads
+Ready to be served !
+It's beautiful burger
+yummmm
+The table was dirty, It's clean now !
 ```

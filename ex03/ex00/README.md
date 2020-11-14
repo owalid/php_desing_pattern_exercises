@@ -1,6 +1,6 @@
 # ex03/ex00 - Simple Factory
 
-Crée une simple factory, dans ComputerFactory.php qui permet de créer une instance de `ComputorDell` grace à la méthode `makeComputor()`
+Crée une simple factory, dans le fichier ComputerFactory.php qui permet de créer une instance de `ComputerDell` grace à la méthode `makeComputer()`
 
 ComputerFactory aura une méthode:
 ```php

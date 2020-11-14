@@ -1,31 +1,40 @@
-# Facade
+# ex06 - Observable
 
-Une façade permet de ne pas rendre visible la complexité derrière une classe.
+Crée un Observable nommé Emitter qui sera un singleton qui contiendra:
 
-Implémenter une façade `BurgerFacade` qui aura:
+Deux variables:
 
-Un attribut:
 ```php
-protected $burger
-// Une instance de la classe Burger qui sera initialisée au constructeur
+private static $instance;
+// Qui sera l'instance courante du singleton
+
+private $listeners = [];
+// Qui sera un tableau à doubles dimensions indexer pour la premiere par l'événement,
+// la deuxième une fonction qui sera passé en paramettre de la méthode `on`
 ```
 
-Deux methodes:
+Trois methodes:
+
 ```php
-public function getBurger()
-// Qui appellera les méthodes qui correspondent à la confection d'un burger
+public static function getInstance(): Emitter {}
+// => Qui retournera l'instance courante ou en créera une si $instance est vide.
 
-public function eatBurger()
-// Qui appellera les méthodes qui correspondent à l'alimentation d'un burger
+public function emit(string $event, ...$args) {}
+// => parcours le tableau $listeners à l'index $event
+// et appelle la fonction avec les $args en paramètre.
+// (penser à utiliser la fonction php "call_user_func_array")
+
+public function on(string $event, callable $fct) {}
+// => Recupere la fonction $fct et la met dans le tableau de listeners à l'index $event.
 ```
 
-Vous devez obtenir la sortie suivante:
+Cet observable servira à émettre des événements et appliquer des fonctions quand il en recevra.
+
+La sortie que vous devez obtenir est la suivante: 
+
 ```
-Bread ok !
-The steak is cooking !
-Onion, tomatoes, salads
-Ready to be served !
-It's beautiful burger
-yummmm
-The table was dirty, It's clean now !
+New user: admin
+New user: user
+User: user commented: Nice !
+User: admin commented: Thanks !
 ```

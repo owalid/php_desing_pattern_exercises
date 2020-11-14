@@ -6,14 +6,14 @@ Une variable:
 
 ```php
 private static $instance;
-// => qui sera une instance de votre singleton
+// => qui sera une instance de votre Classe "Single"
 ```
 
 Une methode:
 
 ```php
 public static function getInstance(): Single
-// => retourne l'instance courrante  ou en créer une nouvelle et retourne juste apres l'avoir crée.
+// => retourne l'instance courrante (self::$instance;) ou en initalise une nouvelle et la retourne juste apres l'avoir crée.
 ```
 
 index.php doit retourner `OK`

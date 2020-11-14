@@ -8,7 +8,7 @@ public function makeFood(): Food;
 public function makeExpert(): FoodChef;
 ```
 
-Créé ensuite deux classes `AsianFoodFactory` et `FrenchFoodFactory` qui implémentera l'interface `FoodFactory` et ses méthodes:
+Créé ensuite deux classes `AsianFoodFactory` et `FrenchFoodFactory` qui implémenteront l'interface `FoodFactory` et ses méthodes:
 
 ```php
 public function makeFood(): Food;

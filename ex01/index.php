@@ -1,9 +1,24 @@
 <?php
-include_once('QueryBuilder.php');
 
-$query = new QueryBuilder();
-echo $query
-      ->select('id', 'firstname', 'lastname')
-      ->from('usr', 'user')
-      ->where('u.id = 1', 'u.lastname = Dupond');
-// SELECT id, firstname, lastname FROM usr AS user WHERE u.id = 1 AND u.lastname = Dupond
+include_once('SimpleCookie.php');
+include_once('DecoratorCookie.php');
+
+$simpleCookie = new SimpleCookie();
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
+
+$simpleCookie = new CookieMacadamia($simpleCookie);
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
+
+$simpleCookie = new CookieWhiteChocolate($simpleCookie);
+echo $simpleCookie->getType() . ' ' . $simpleCookie->getCalories();
+echo PHP_EOL;
+
+/*
+Resultat:
+
+Simple Cookie 170
+Simple Cookie, macadamia 180
+Simple Cookie, macadamia, white chocolate 200
+*/

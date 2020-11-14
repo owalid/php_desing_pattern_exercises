@@ -1,38 +1,34 @@
-# ex01 - Builder
+# ex02 - Decorator
 
-Crée une classe QueryBuilder qui contiendra:
+La classe `SimpleCookie` implémente l'interface `Cookie`.
 
-Trois attributs:
+Faites en sortes d'utiliser un décorateur avec les classes `CookieMacadamia`, `CookieWhiteChocolate`.
+Dans le fichier `DecoratorCookie.php`.
 
-```php
-private $select = []; // Qui sera un tableau ou contiendra les instructions d'un select
-private $from = []; // La même chose mais pour from
-private $where = []; // La même chose mais pour where
-```
+Les décorateurs auront dans leurs classes:
 
-Trois fonctions:
+Un attribut:
 
 ```php
-public function select(...$args): QueryBuilder {}
-// Qui injectera dans l'attribut $select les paramètre de la fonction.
-
-public function from($table, $alias = false): QueryBuilder {}
-// Injecte dans l'attribut $from la table $table avec $alias si il est présent.
-// (Le bon formatage avec un alias sera "<$table> AS <$alias>")
-
-public function where(...$args): QueryBuilder {}
-// La même chose mais pour where mais qui poussera dans le tableau where les args.
-
-public function __toString(): QueryBuilder {}
-// Qui retourne une string qui sera les différents champs bien formatter comme le veux sujet.
-// (penser à utiliser la fonction implode pour bien séparer le contenu des tableaux).
+protected $cookie; // Qui sera une instance de la classe Cookie qui sera initialisée au constructeur
 ```
 
-La particularité des Builder comme vous pouvez le voir dans `l'index.php` c'est que vous pouvez chainer les méthodes d'une même instance. Pour ce faire vous devez toujours renvoyer `$this` à la fin de vos de méthodes.
+Des methodes:
 
+```php
+public function __construct(Cookie $coffee)
 
-La sortie que vous devez obtenir est la suivante: 
+public function getCalories(): Cookie
+// Qui retournera la calorie courrante + l'ajout d'un nombre
+
+public function getType(): string
+// Qui retournera le type courrant + l'ajout d'une string
+```
+
+La sortie que vous devez obtenir est la suivante:
 
 ```
-SELECT id, firstname, lastname FROM usr AS user WHERE u.id = 1 AND u.lastname = Dupond
+Simple Cookie 170
+Simple Cookie, macadamia 180
+Simple Cookie, macadamia, white chocolate 200
 ```
