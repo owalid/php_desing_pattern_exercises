@@ -10,12 +10,12 @@ class CookieMacadamia implements Cookie
       $this->coffee = $coffee;
   }
 
-  public function getCalories()
+  public function getCalories(): Cookie
   {
       return $this->coffee->getCalories() + 10;
   }
 
-  public function getType()
+  public function getType(): string
   {
       return $this->coffee->getType() . ', macadamia';
   }

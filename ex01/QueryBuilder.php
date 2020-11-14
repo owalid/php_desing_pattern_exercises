@@ -6,19 +6,19 @@ class QueryBuilder {
   private $where = [];
   private $from = [];
 
-  public function select(...$args)
+  public function select(...$args): QueryBuilder
   {
     $this->select = $args;
     return $this;
   }
 
-  public function where(...$args) 
+  public function where(...$args): QueryBuilder
   {
     $this->where = $args;
     return $this;
   }
 
-  public function from($table, $alias = false) {
+  public function from($table, $alias = false): QueryBuilder {
     if (!$alias) {
       $this->from[] = $table;
     } else {

@@ -1,11 +1,11 @@
 # ex03/ex00 - Simple Factory
 
-Crée une simple factory, dans ComputerFactory.php qui permet de crée une instance de `ComputorDell` grace à la methode `makeComputor()`
+Crée une simple factory, dans ComputerFactory.php qui permet de créer une instance de `ComputorDell` grace à la méthode `makeComputor()`
 
-ComputerFactory aura une methode:
+ComputerFactory aura une méthode:
 ```php
 public static function makeComputer($brand): Computer
 ```
-Cette methode créera une nouvelle instance de `ComputerDell`
+Cette méthode créera une nouvelle instance de `ComputerDell`
 
 index.php devra retourné: `Dell`

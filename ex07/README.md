@@ -1,18 +1,22 @@
 # Facade
 
-Une facade permet de ne pas rendre visible la complexité derriere une classe.
+Une façade permet de ne pas rendre visible la complexité derrière une classe.
 
-Implementé une facade `BurgerFacade` qui aura:
+Implémenter une façade `BurgerFacade` qui aura:
 
 Un attribut:
 ```php
-protected $burger // une instance de la classe Burger qui sera initialisé au constructeur
+protected $burger
+// Une instance de la classe Burger qui sera initialisée au constructeur
 ```
 
 Deux methodes:
 ```php
-getBurger() // Qui appelera les methodes qui correspondera à la confection d'un burger
-eatBurger() // Qui appelera les methodes qui correspondera à l'alimentation d'un burger
+public function getBurger()
+// Qui appellera les méthodes qui correspondent à la confection d'un burger
+
+public function eatBurger()
+// Qui appellera les méthodes qui correspondent à l'alimentation d'un burger
 ```
 
 Vous devez obtenir la sortie suivante:

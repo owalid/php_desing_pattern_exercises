@@ -2,17 +2,21 @@
 
 Crée une interface `FoodFactory`
 
-Qui contiendra deux definitions de methodes:
+Qui contiendra deux définitions de méthodes:
 ```php
 public function makeFood(): Food;
 public function makeExpert(): FoodChef;
 ```
 
-Crée ensuite deux classes `AsianFoodFactory` et `FrenchFoodFactory` qui implementera l'interface `FoodFactory` et ses methodes:
+Créé ensuite deux classes `AsianFoodFactory` et `FrenchFoodFactory` qui implémentera l'interface `FoodFactory` et ses méthodes:
 
 ```php
-public function makeFood(): Food; // qui creera une nourriture en fonction de la classe (AsianFood pour AsianFoodFactory ou FrenchFood pour FrenchFoodFactory)
-public function makeExpert(): FoodChef; // => qui creera un chef en fonction de la classe comme makeFood()
+// qui créera une nourriture en fonction de la classe
+// (AsianFood pour AsianFoodFactory ou FrenchFood pour FrenchFoodFactory)
+public function makeFood(): Food;
+
+// => qui créera un chef en fonction de la classe comme makeFood()
+public function makeExpert(): FoodChef;
 ```
 
 Vous devez obtenir la sortie suivante:

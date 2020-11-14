@@ -1,6 +1,6 @@
 # ex00 - Singleton
 
-Crée un singleton Single qui contiendras
+Crée un singleton nommé `Single` qui contiendra:
 
 Une variable:
 
