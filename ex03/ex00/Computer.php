@@ -1,5 +1,6 @@
 <?php
 
-interface Computer {
+interface Computer
+{
   public function printBrand();
 }

@@ -7,16 +7,10 @@ interface Filter
 
 class BAndWFilter implements Filter
 {
-  public function getFilter()
-  {
-    return 'Black and white filter.';
-  }
+//  Your code here
 }
 
 class SepiaFilter implements Filter
 {
-  public function getFilter()
-  {
-    return 'Sepia filter.';
-  }
+//  Your code here
 }

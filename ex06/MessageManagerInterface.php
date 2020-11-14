@@ -1,5 +1,6 @@
 <?php
 
-interface MessageManagerInterface {
+interface MessageManagerInterface
+{
   public function printMessage($msg);
 }
