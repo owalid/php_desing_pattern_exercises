@@ -11,12 +11,12 @@ public function makeExpert(): FoodChef;
 Créé ensuite deux classes `AsianFoodFactory` et `FrenchFoodFactory` qui implémentera l'interface `FoodFactory` et ses méthodes:
 
 ```php
-// qui créera une nourriture en fonction de la classe
-// (AsianFood pour AsianFoodFactory ou FrenchFood pour FrenchFoodFactory)
 public function makeFood(): Food;
+// => Qui créera une nourriture en fonction de la classe
+// (AsianFood pour AsianFoodFactory ou FrenchFood pour FrenchFoodFactory)
 
-// => qui créera un chef en fonction de la classe comme makeFood()
 public function makeExpert(): FoodChef;
+// => Qui créera un chef en fonction de la classe comme makeFood()
 ```
 
 Vous devez obtenir la sortie suivante:

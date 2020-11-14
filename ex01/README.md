@@ -13,19 +13,19 @@ private $where = []; // La même chose mais pour where
 Trois fonctions:
 
 ```php
-// Qui injectera dans l'attribut $select les paramètre de la fonction.
 public function select(...$args): QueryBuilder {}
+// Qui injectera dans l'attribut $select les paramètre de la fonction.
 
+public function from($table, $alias = false): QueryBuilder {}
 // Injecte dans l'attribut $from la table $table avec $alias si il est présent.
 // (Le bon formatage avec un alias sera "<$table> AS <$alias>")
-public function from($table, $alias = false): QueryBuilder {}
 
-// La même chose mais pour where mais qui poussera dans le tableau where les args.
 public function where(...$args): QueryBuilder {}
+// La même chose mais pour where mais qui poussera dans le tableau where les args.
 
+public function __toString(): QueryBuilder {}
 // Qui retourne une string qui sera les différents champs bien formatter comme le veux sujet.
 // (penser à utiliser la fonction implode pour bien séparer le contenu des tableaux).
-public function __toString(): QueryBuilder {}
 ```
 
 La particularité des Builder comme vous pouvez le voir dans `l'index.php` c'est que vous pouvez chainer les méthodes d'une même instance. Pour ce faire vous devez toujours renvoyer `$this` à la fin de vos de méthodes.

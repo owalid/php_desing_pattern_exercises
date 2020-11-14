@@ -9,12 +9,12 @@ private $fbMessageManager
 ```
 
 ```php
-// qui initialisera l'attribut $fbMessageManager
 public function __construct(FbMessageManager $fbMessageManager)
+// Qui initialisera l'attribut $fbMessageManager
 
-// qui appellera la fonction printMessageFb()
-// de l'instance de FbMessageManager en passant en paramètre $msg
 public function printMessage($msg)
+// Qui appellera la fonction printMessageFb()
+// de l'instance de FbMessageManager en passant en paramètre $msg
 ```
 
 La sortie que vous devez obtenir est la suivante: 

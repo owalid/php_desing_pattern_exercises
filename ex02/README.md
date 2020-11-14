@@ -17,11 +17,11 @@ Des methodes:
 ```php
 public function __construct(Cookie $coffee){}
 
-// Qui retournera la calorie courrante + l'ajout d'un nombre
 public function getCalories(): Cookie {} 
+// Qui retournera la calorie courrante + l'ajout d'un nombre
 
-// Qui retournera le type courrant + l'ajout d'une string
 public function getType(): string {}
+// Qui retournera le type courrant + l'ajout d'une string
 ```
 
 La sortie que vous devez obtenir est la suivante:
