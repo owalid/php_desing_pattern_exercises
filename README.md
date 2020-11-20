@@ -12,3 +12,7 @@ Chaque fois que vous faites un exercice, vous devez charger le fichier `index.ph
 ### [ex05 - Bridge](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex05)
 ### [ex06 - Adapter](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex06)
 ### [ex07 - Observable](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex07)
+### [ex08 - Iterator](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex08)
+### [ex09 - Chain of responsibility](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex09)
+### [ex10 - Proxy](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex10)
+### [ex11 - MVC](https://github.com/owalid/php_desing_pattern_exercises/tree/main/ex11)
