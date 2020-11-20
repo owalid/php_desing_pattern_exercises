@@ -1,4 +1,4 @@
-# ex02 - Decorator
+# ex01 - Decorator
 
 La classe `SimpleCookie` implémente l'interface `Cookie`.
 
