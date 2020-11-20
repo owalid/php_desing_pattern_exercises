@@ -1,4 +1,4 @@
-# ex09 - Iterator
+# ex08 - Iterator
 
 Implémenter la classe StationList qui contiendra:
 
