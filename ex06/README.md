@@ -1,4 +1,4 @@
-# ex04 - Adapter
+# ex06 - Adapter
 
 Crée un Adapter nommé `FbMessageManagerAdapter` (dans le fichier `facebook/FbMessageManagerAdapter.php`) qui implémentera l'interface `MessageManagerInterface` et qui aura:
 
