@@ -1,4 +1,4 @@
-# ex06 - Observable
+# ex07 - Observable
 
 Crée un Observable nommé Emitter qui sera un singleton qui contiendra:
 
