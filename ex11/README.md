@@ -1,4 +1,4 @@
-# ex08 - MVC
+# ex11 - MVC
 
 Le but de ce mini-projet est de vous familiariser avec l'architecture MVC.
 
