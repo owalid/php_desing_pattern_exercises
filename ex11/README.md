@@ -16,7 +16,7 @@ Le dossier `views` contiendra les vues du site.
 Vous devez implémenter:
 
 ### Model
-- Un modèle Post qui contiendra toutes les fonctions pour créer, supprimer, récupéré un ou plusieurs article.
+- Un modèle `Post` qui contiendra toutes les fonctions pour créer, supprimer, récupéré un ou tous les articles.
 
 ### Vues
 - Une vue `home` qui contiendra une home page.
@@ -30,7 +30,7 @@ Cette vue contiendra le detail de l'article sélectionner précédement.
 
 - Pour chaque type de vues (`posts` et `pages`) vous devez prendre en compte les erreurs et afficher les vues "erreur" losqu'un problème survient. (mauvaise url, formulaire mal rempli etc).
 
-### Controllers
+### Controlers
 - Deux contrôlleurs: Posts et Pages qui importeron la bonne vue en fonction du fichier
   - Posts: contiendras les fonctions pour créer, supprimer récupéré un ou plusieurs article et mettera à jours le post courrant utilisé dans les vues
 
