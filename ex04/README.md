@@ -1,4 +1,4 @@
-# ex01 - Builder
+# ex04 - Builder
 
 Crée une classe QueryBuilder qui contiendra:
 
