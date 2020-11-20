@@ -1,4 +1,4 @@
-# Facade
+# ex02 - Facade
 
 Une façade permet de ne pas rendre visible la complexité derrière une classe.
 
