@@ -26,7 +26,7 @@ public function pay(float $amountToPay)
 
 // Si l'account courrant peut payer (en appelant la méthode canPay avec en paramètre $amountToPay)
 
-// Si elle peut payer vous afficherez: Paid %s using %s' . PHP_EOL, $amountToPay, get_called_class()
+// Si elle peut payer vous afficherez un messsage avec la classe avec laquelle elle a payé et le prix qu'elle à payé
 
 // Si on ne peux pas payer:
 
