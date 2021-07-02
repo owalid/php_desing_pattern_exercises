@@ -10,4 +10,4 @@ $landscape = new Landscape($baw_filter);
 $portrait = new Portrait($sepia_filter);
 
 echo $landscape->getPicture(); // => Landscape picture with Black and white filter.
-echo $portrait->getPicture(); // => Landscape picture with Sepia filter.
+echo $portrait->getPicture(); // => Portrait picture with Sepia filter.
